@@ -17,17 +17,28 @@
 
 </style>
 
-<p style="font-size:20px;font-family:georgia,serif;" align="right">logout</p>
 
-<h1 style="text-align: center;font-family:georgia,serif;font-size:48px;">Pinterest Data Analytics</h1>
+<header>
+  <!--<p style="font-size:20px;font-family:georgia,serif;" align="right">logout</p>-->
+  <form action="action_page.php" align="right">
+    Username:
+    <input type="text" name="username" value="">
+    <br>Password:
+    <input type="password" name="password" value="" pattern=".{8,}" title="Eight or more characters">
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+  <hr />
 
+  <h1 style="text-align: center;font-family:georgia,serif;font-size:48px;">Pinterest Data Analytics</h1>
+</header>
 <hr />
 <table align="center" style="width:60%;text-align: center;font-family:georgia,serif;font-size:24px;">
   <tbody>
     <tr>
-      <td>COLORS</td>
+      <td><b>COLORS</b></td>
       <td>|</td>
-      <td>MOSAIC</td>
+      <td><a href="url" style="color: #000000">MOSAIC</a></td>
       <td>|</td>
       <td>STATS</td>
       <td>|</td>
@@ -43,47 +54,61 @@
   <tbody>
     <tr valign="top">
       <th width="20%">
-        <div id="description_box">
-          <h1 style="font-size:24px;">All Colors</h1>
-          <hr />
-          <br /> This application will analyze the colors in all the images matching the chosen filters and display them in a fancy visualization.
-          <br />
-        </div>
+        <section>
+          <div id="description_box">
+            <h1 style="font-size:24px;">All Colors</h1>
+            <hr />
+            <br /> This application will analyze the colors in all the images matching the chosen filters and display them in a fancy visualization.
+            <br />
+          </div>
+        </section>
       </th>
 
       <th>
-        <div id="application_box">
+        <section>
+          <div id="application_box">
 
-        </div>
+          </div>
+        </section>
       </th>
 
       <th width="20%">
-        <div id="description_box">
-          <h1 style="font-size:24px;">Customize Image Set:</h1> Search by Keyword:
-          <input type="text" name="Keyword" placeholder="Keyword" style="text-align-last:center">
-          <br>
-          <br /> Search by Board:
-          <select style="text-align-last:center;min-width:100%;">
-            <option selected>No Specific Board</option>
-            <option value="User Board 1">User Board 1</option>
-            <option value="User Board 2">User Board 2</option>
-            <option value="User Board 3">User Board 3</option>
-            <option value="User Board 4">User Board 4</option>
-          </select>
-          <br>
-          <br /> Additional Filters:
-          <select style="text-align-last:center;min-width:100%;">
-            <option value="All">All</option>
-            <option value="Repins">Repins</option>
-            <option value="Likes">Likes</option>
-            <option value="Comments">Comments</option>
-          </select>
-		  <br />
-		  <br />
-		  <button type="button">Apply</button>
-        </div>
+        <section>
+          <div id="description_box">
+            <h1 style="font-size:24px;">Customize Image Set:</h1>
+
+            <label>
+              Search by Keyword:
+              <input type="text" name="Keyword" placeholder="Keyword" style="text-align-last:center">
+            </label>
+
+            <br>
+            <br /> Search by Board:
+            <select style="text-align-last:center;min-width:100%;">
+              <option selected>No Specific Board</option>
+              <option value="User Board 1">User Board 1</option>
+              <option value="User Board 2">User Board 2</option>
+              <option value="User Board 3">User Board 3</option>
+              <option value="User Board 4">User Board 4</option>
+            </select>
+            <br>
+            <br /> Additional Filters:
+            <select style="text-align-last:center;min-width:100%;">
+              <option value="All">All</option>
+              <option value="Repins">Repins</option>
+              <option value="Likes">Likes</option>
+              <option value="Comments">Comments</option>
+            </select>
+            <br />
+            <br />
+            <button type="button">Apply</button>
+          </div>
+        </section>
       </th>
     </tr>
 
   </tbody>
 </table>
+<footer>
+  <p style="text-align:center"><img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Pinterest-logo.png" alt="Pinterest Logo" width="42" height="42"></p>
+</footer>
