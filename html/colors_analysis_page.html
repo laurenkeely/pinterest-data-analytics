@@ -1,0 +1,123 @@
+<!-- Page containing the color analysis part of the app -->
+<!-- https://raw.github.com/laurenkeely/pinterest-data-analytics/gh-pages/PinterestDataAnalyticsDesign.jpg -->
+
+<style>
+  #description_box {
+    border: 1px solid black;
+    padding: 25px;
+    margin: 25px;
+    padding-top: 0%;
+  }
+  
+  #application_box {
+    width: 100%;
+    padding-bottom: 100%;
+    background: SteelBlue;
+  }
+
+</style>
+
+<header>
+  <!--<p style="font-size:20px;font-family:georgia,serif;" align="right">logout</p>-->
+  <form action="action_page.php" align="right">
+    Username:
+    <input type="text" name="username" value="">
+    <br>Password:
+    <input type="password" name="password" value="" pattern=".{8,}" title="Eight or more characters">
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+  <hr />
+
+  <h1 style="text-align: center;font-family:georgia,serif;font-size:48px;">Pinterest Data Analytics</h1>
+</header>
+<hr />
+
+<table align="center" style="width:60%;text-align: center;font-family:georgia,serif;font-size:24px;">
+  <tbody>
+    <tr>
+      <nav>
+        <td><b>COLORS</b></td>
+        <td>|</td>
+        <td><a href="#" style="color: #000000">
+	  MOSAIC
+	  </a></td>
+        <td>|</td>
+        <td><a href="#" style="color: #000000">
+	  STATS
+	  </td>
+      <td>|</td>
+      <td><a href="#" style="color: #000000">
+	  ABOUT</td>
+	  </nav>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+<br />
+
+<table style="width:100%;text-align: center">
+  <tbody>
+    <tr valign="top">
+      <th width="20%">
+        <section>
+          <div id="description_box">
+            <h1 style="font-size:24px;">All Colors</h1>
+            <hr />
+            <br /> 
+			This application will analyze the colors in all the images matching the chosen filters and display them in a fancy visualization.
+            <br />
+          </div>
+        </section>
+      </th>
+
+      <th>
+        <section>
+          <div id="application_box">
+
+          </div>
+        </section>
+      </th>
+
+      <th width="20%">
+        <section>
+          <div id="description_box">
+            <h1 style="font-size:24px;">Customize Image Set:</h1>
+
+            <label>
+              Search by Keyword:
+              <input type="text" name="Keyword" placeholder="Keyword" style="text-align-last:center">
+            </label>
+
+            <br>
+            <br /> Search by Board:
+            <select style="text-align-last:center;min-width:100%;">
+              <option selected>No Specific Board</option>
+              <option value="User Board 1">User Board 1</option>
+              <option value="User Board 2">User Board 2</option>
+              <option value="User Board 3">User Board 3</option>
+              <option value="User Board 4">User Board 4</option>
+            </select>
+            <br>
+            <br /> Additional Filters:
+            <select style="text-align-last:center;min-width:100%;">
+              <option value="All">All</option>
+              <option value="Repins">Repins</option>
+              <option value="Likes">Likes</option>
+              <option value="Comments">Comments</option>
+            </select>
+            <br />
+            <br />
+            <button type="button">Apply</button>
+          </div>
+        </section>
+      </th>
+    </tr>
+
+  </tbody>
+</table>
+
+<footer>
+  <p style="text-align:center"><img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Pinterest-logo.png" alt="Pinterest Logo" width="42" height="42"></p>
+</footer>
