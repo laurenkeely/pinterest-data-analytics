@@ -1,2 +1,89 @@
 <!-- Page containing the color analysis part of the app -->
 <!-- https://raw.github.com/laurenkeely/pinterest-data-analytics/gh-pages/PinterestDataAnalyticsDesign.jpg -->
+
+<style>
+  #description_box {
+    border: 1px solid black;
+    padding: 25px;
+    margin: 25px;
+    padding-top: 0%;
+  }
+  
+  #application_box {
+    width: 100%;
+    padding-bottom: 100%;
+    background: SteelBlue;
+  }
+
+</style>
+
+<p style="font-size:20px;font-family:georgia,serif;" align="right">logout</p>
+
+<h1 style="text-align: center;font-family:georgia,serif;font-size:48px;">Pinterest Data Analytics</h1>
+
+<hr />
+<table align="center" style="width:60%;text-align: center;font-family:georgia,serif;font-size:24px;">
+  <tbody>
+    <tr>
+      <td>COLORS</td>
+      <td>|</td>
+      <td>MOSAIC</td>
+      <td>|</td>
+      <td>STATS</td>
+      <td>|</td>
+      <td>ABOUT</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+<br />
+
+<table style="width:100%;text-align: center">
+  <tbody>
+    <tr valign="top">
+      <th width="20%">
+        <div id="description_box">
+          <h1 style="font-size:24px;">All Colors</h1>
+          <hr />
+          <br /> This application will analyze the colors in all the images matching the chosen filters and display them in a fancy visualization.
+          <br />
+        </div>
+      </th>
+
+      <th>
+        <div id="application_box">
+
+        </div>
+      </th>
+
+      <th width="20%">
+        <div id="description_box">
+          <h1 style="font-size:24px;">Customize Image Set:</h1> Search by Keyword:
+          <input type="text" name="Keyword" placeholder="Keyword" style="text-align-last:center">
+          <br>
+          <br /> Search by Board:
+          <select style="text-align-last:center;min-width:100%;">
+            <option selected>No Specific Board</option>
+            <option value="User Board 1">User Board 1</option>
+            <option value="User Board 2">User Board 2</option>
+            <option value="User Board 3">User Board 3</option>
+            <option value="User Board 4">User Board 4</option>
+          </select>
+          <br>
+          <br /> Additional Filters:
+          <select style="text-align-last:center;min-width:100%;">
+            <option value="All">All</option>
+            <option value="Repins">Repins</option>
+            <option value="Likes">Likes</option>
+            <option value="Comments">Comments</option>
+          </select>
+		  <br />
+		  <br />
+		  <button type="button">Apply</button>
+        </div>
+      </th>
+    </tr>
+
+  </tbody>
+</table>
