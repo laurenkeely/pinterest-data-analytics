@@ -1,4 +1,5 @@
-<!-- Page containing the color analysis part of the app -->
+<!-- 
+  This webpage is one of several application's pages. It contains a navigation bar to change visualizers, a description of the current visualizer, and some settings to filter the list of used images, as well as the visualizer itself. -->
 <!-- https://raw.github.com/laurenkeely/pinterest-data-analytics/gh-pages/PinterestDataAnalyticsDesign.jpg -->
 <DOCTYPE! html>
 <html>
@@ -9,17 +10,9 @@
 <body>
 
 <header>
-  <!--<p style="font-size:20px;font-family:georgia,serif;" align="right">logout</p>-->
-  <form action="action_page.php" align="right">
-    <p>Username:
-    <input type="text" name="username" value="">
-    </p>
-    <p>Password:
-    <input type="password" name="password" value="" pattern=".{8,}" title="Eight or more characters">
-    </p>
-    <input type="submit" value="Submit">
-  </form>
-  <hr />
+  <div class="sticky">
+    <a href="#">logout</a>
+  </div>
   <h1>Pinterest Data Analytics</h1>
 </header>
 
@@ -27,7 +20,7 @@
 <table align="center" class="nav">
   <tbody>
     <tr>
-        <td><b>COLORS</b></td>
+        <td><a href="#">COLORS</a></td>
         <td>|</td>
         <td><a href="#">MOSAIC</a></td>
         <td>|</td>
@@ -103,3 +96,4 @@
   <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Pinterest-logo.png" alt="Pinterest Logo">
 </footer>
 </body>
+
