@@ -8,6 +8,7 @@ Chris Bradel
 }
 
 h1 {
+	width: 100%;
 	text-align: center;
 	margin-top: 40px;
 	margin-bottom: 40px;
@@ -24,8 +25,8 @@ h3 {
 	font-size: 24px;
 }
 
-h4 {
-	font-size: 18px;
+hr {
+	opacity: 0.3;
 }
 
 nav {
@@ -34,16 +35,27 @@ nav {
 	border-bottom: 1px solid;
 	margin-bottom: 30px;
 }
+
 nav a {
+	display: block;
 	text-decoration: none;
 	color: #000000;
+	transition: transform 0.2s ease, color 0.2s ease-in;
+	-webkit-transition: transform 0.2s ease, color 0.2s ease-in;
 }
 
 nav a:hover {
 	color: SteelBlue;
+	transform: translate(0px, -2px);
+	-webkit-transform: translate(0px, -2px);
+}
+
+nav a:active {
+	color: SteelBlue;
 }
 
 footer {
+	position: relative;
 	text-align: center;
 	padding-top: 10px;
 	padding-bottom: 20px;
@@ -59,9 +71,34 @@ select {
 	min-width:100%;
 }
 
+input:invalid {
+	color: red;
+}
+
+.sticky {
+	width: 100%;
+	top: 0px;
+	right: 5px;
+	padding: 2px;
+	z-index: 5;
+	text-align: right;
+	position: fixed;
+	background-color: white;
+}
+
+.sticky a {
+	text-decoration: none;
+	color: black;
+}
+
+.sticky a:hover {
+	color: SteelBlue;
+}
+
 .container {
     text-align: center;
     max-width: 75%;
+    float: center;
     margin-top: auto;
     margin-left: auto;
     margin-right: auto;
@@ -69,6 +106,11 @@ select {
 
  .container section {
  	max-width: 70%;
+ }
+
+ .container hr {
+ 	width: 400px;
+ 	opacity: 70%;
  }
 
  .nav {
@@ -108,6 +150,7 @@ select {
 
 .sidebar {
 	width: 20%;
+	position: relative;
 }
 
 .description_box {
@@ -122,5 +165,8 @@ select {
     padding-bottom: 100%;
     background: SteelBlue;
 }
+
+
+
 
 
