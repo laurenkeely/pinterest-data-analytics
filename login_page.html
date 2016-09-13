@@ -1,0 +1,32 @@
+<!-- 
+  The login page for pinterest accounts. This technically may need to be a pinterest hosted authentication page, but for now, we'll make a pretty one.
+  This webpage allows users to log into their Pinterest account for custom lists of images to be used. It leads users to the main content pages. -->
+<!-- https://raw.github.com/laurenkeely/pinterest-data-analytics/gh-pages/PinterestDataAnalyticsDesign_Login_.jpg -->
+<DOCTYPE! html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <title>Login</title>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>Pinterest Data Analytics</h1>
+    <hr width="400px">
+  </header>
+
+  <section class="container">
+    <div class="input">
+      <form action="action_page.php">
+        <p>Username</p>
+        <input type="text" name="username" value="">
+        <p>Password:</p>
+        <input type="password" name="password" value="" pattern=".{8,}" title="Should be eight or more characters">
+        <p><a href="colors_analysis_page.html" class="button">Log In</a></p>
+      </form>
+    </div>
+
+  </section>
+</div>
+</body>
+</html>
