@@ -1,0 +1,105 @@
+<!-- Page containing the color analysis part of the app -->
+<!-- https://raw.github.com/laurenkeely/pinterest-data-analytics/gh-pages/PinterestDataAnalyticsDesign.jpg -->
+<DOCTYPE! html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <title>Pinterest Data Analytics</title>
+</head>
+<body>
+
+<header>
+  <!--<p style="font-size:20px;font-family:georgia,serif;" align="right">logout</p>-->
+  <form action="action_page.php" align="right">
+    <p>Username:
+    <input type="text" name="username" value="">
+    </p>
+    <p>Password:
+    <input type="password" name="password" value="" pattern=".{8,}" title="Eight or more characters">
+    </p>
+    <input type="submit" value="Submit">
+  </form>
+  <hr />
+  <h1>Pinterest Data Analytics</h1>
+</header>
+
+<nav>
+<table align="center" class="nav">
+  <tbody>
+    <tr>
+        <td><b>COLORS</b></td>
+        <td>|</td>
+        <td><a href="#">MOSAIC</a></td>
+        <td>|</td>
+        <td><a href="#">STATS</td>
+      <td>|</td>
+      <td><a href="#">ABOUT</td>
+    </tr>
+  </tbody>
+</table>
+</nav>
+
+<table>
+  <tbody>
+    <tr valign="top">
+      <th class="sidebar">
+        <section>
+          <div class="description_box">
+            <h3>All Colors</h3>
+            <hr />
+            <p>
+			This application will analyze the colors in all the images matching the chosen filters and display them in a fancy visualization.
+            </p>
+          </div>
+        </section>
+      </th>
+
+      <th>
+        <section>
+          <div id="application_box">
+
+          </div>
+        </section>
+      </th>
+
+      <th class="sidebar">
+        <section>
+          <div class="description_box">
+            <h3>Customize Image Set:</h3>
+
+            <label>
+              Search by Keyword:
+              <input type="text" name="Keyword" placeholder="Keyword">
+            </label> 
+            <p>Search by Board:
+            <select>
+              <option selected>No Specific Board</option>
+              <option value="User Board 1">User Board 1</option>
+              <option value="User Board 2">User Board 2</option>
+              <option value="User Board 3">User Board 3</option>
+              <option value="User Board 4">User Board 4</option>
+            </select>
+            </p>
+
+            <p> Additional Filters:
+            <select>
+              <option value="All">All</option>
+              <option value="Repins">Repins</option>
+              <option value="Likes">Likes</option>
+              <option value="Comments">Comments</option>
+            </select>
+            </p>
+    
+            <button type="button">Apply</button>
+          </div>
+        </section>
+      </th>
+    </tr>
+
+  </tbody>
+</table>
+
+<footer>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Pinterest-logo.png" alt="Pinterest Logo">
+</footer>
+</body>
