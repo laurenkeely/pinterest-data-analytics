@@ -17,32 +17,41 @@
         }
 
         $(document).ready(function() {
+            
             function clicked_colors() {
                 $("#application_widget").remove();
                 $("#application_box").append("<div id=\"application_widget\"><br /><p>IMAGINE COLORS WIDGET HERE</p></div>");
+                $("#description_box").html("<p class=\"desc_title\">All Colors</p><hr /><p>This application will analyze the colors in all the images matching the chosen filters and display them in a fancy visualization.</p>");
                 clear_filters();
                 $("#application_box").data("widget_type", "color");
+                history.pushState(null, null, '#colors');
             }
 
             function clicked_mosaic() {
                 $("#application_widget").remove();
                 $("#application_box").append("<div id=\"application_widget\"><br /><p>PRETEND YOU SEE A MOSAIC WIDGET</p></div>");
+                $("#description_box").html("<p class=\"desc_title\">Mosaic</p><hr /><p>This application will analyze the colors in all the images matching the chosen filters and display them in a different fancy visualization.</p>");
                 clear_filters();
                 $("#application_box").data("widget_type", "mosaic");
+                history.pushState(null, null, '#mosaic');
             }
 
             function clicked_stats() {
                 $("#application_widget").remove();
                 $("#application_box").append("<div id=\"application_widget\"><br /><p>SOMEDAY, THIS WILL BE A STATS WIDGET</p></div>");
+                $("#description_box").html("<p class=\"desc_title\">Stats</p><hr /><p>This application will tell you about the photos that match your filters.</p>");
                 clear_filters();
                 $("#application_box").data("widget_type", "stats");
+                history.pushState(null, null, '#stats');
             }
 
             function clicked_about() {
                 $("#application_widget").remove();
                 $("#application_box").append("<div id=\"application_widget\"><br /><p>FOR HIRE: ABOUT WIDGET</p></div>");
+                $("#description_box").html("<p class=\"desc_title\">About</p><hr /><p>This will tell you all about who made this and why.</p>");
                 clear_filters();
                 $("#application_box").data("widget_type", "about");
+                history.pushState(null, null, '#about');
             }
 
             $("#colors").click(function() {
@@ -61,28 +70,44 @@
                 clicked_about();
             });
 
+            // Go from launch page to log in page
             $("#button_get_started").click(function() {
                 $("#page_intro").hide();
                 $("#page_login").show();
 
             });
 
+            // Go from log in page to application page
             $("#button_log_in").click(function() {
                 $("#page_login").hide();
                 $("#page_main").show();
-
-            });
-
-            $(document).ready(function() {
                 clicked_colors();
-                
             });
+
+            // Process new view
+            window.onhashchange = function(){
+              switch(location.hash) {
+                case '#colors':
+                  clicked_colors();
+                break;
+                case '#mosaic':
+                  clicked_mosaic();
+                break;
+                      case '#stats':
+                  clicked_stats();
+                break;
+                      case '#about':
+                  clicked_about();
+                break;
+              }
+            }
 
         });
     </script>
 </head>
 
 <body>
+    // Initial Landing Page
     <div id="page_intro">
         <header>
             <h1>Pinterest Data Analytics</h1>
@@ -96,6 +121,8 @@
                 </h3>
         </section>
     </div>
+    
+    // Log In Page
     <div id="page_login" style="display:none">
         <header>
             <h1>Pinterest Data Analytics</h1>
@@ -113,6 +140,8 @@
             </div>
         </section>
     </div>
+    
+    // Main Multi-Windowed Page
     <div id="page_main" style="display:none">
         <header>
             <div class="sticky">
@@ -124,13 +153,13 @@
             <table class="nav">
                 <tbody>
                     <tr>
-                        <td><a href="#colors" id="colors">COLORS</a></td>
+                        <td><a href="javascript:;" id="colors">COLORS</a></td>
                         <td>|</td>
-                        <td><a href="#mosaic" id="mosaic">MOSAIC</a></td>
+                        <td><a href="javascript:;" id="mosaic">MOSAIC</a></td>
                         <td>|</td>
-                        <td><a href="#stats" id="stats">STATS</a></td>
+                        <td><a href="javascript:;" id="stats">STATS</a></td>
                         <td>|</td>
-                        <td><a href="#about" id="about">ABOUT</a></td>
+                        <td><a href="javascript:;" id="about">ABOUT</a></td>
                     </tr>
                 </tbody>
             </table>
