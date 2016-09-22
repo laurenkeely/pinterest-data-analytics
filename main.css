@@ -1,6 +1,5 @@
 /* 
 CSS Styling for all html pages
-Lauren Spence 
 Chris Bradel
 */
 * {
@@ -22,6 +21,10 @@ h2 {
 }
 
 h3 {
+	font-size: 24px;
+}
+
+.desc_title {
 	font-size: 24px;
 }
 
@@ -75,6 +78,7 @@ input:invalid {
 	color: red;
 }
 
+
 .sticky {
 	width: 100%;
 	top: 0px;
@@ -117,6 +121,7 @@ input:invalid {
  	width: 60%;
  	text-align: center;
 	font-size: 24px;
+     margin: auto;
  }
 
 .input {
@@ -153,7 +158,7 @@ input:invalid {
 	position: relative;
 }
 
-.description_box {
+.info_box {
     border: 1px solid black;
     padding: 25px;
     margin: 25px;
@@ -162,6 +167,7 @@ input:invalid {
   
 #application_box {
     width: 100%;
+    
     padding-bottom: 100%;
     background: SteelBlue;
 }
